@@ -1,9 +1,9 @@
 FC=mpif90
 FFLAGS=-c -Wall
 LDFLAGS=
-SOURCES=parallel_loop.f90 main.f90 
+SOURCES=hello_world.f90 main.f90 
 OBJECTS=$(SOURCES:.f90=.o)
-EXECUTABLE=parallel_loop
+EXECUTABLE=hello_world
 
 all: $(SOURCES) $(EXECUTABLE)
 	
@@ -12,3 +12,6 @@ $(EXECUTABLE): $(OBJECTS)
 
 %.o: %.f90
 	$(FC) $(FFLAGS) $< -o $@
+
+clean: 
+	rm *.o *.mod $(EXECUTABLE)
