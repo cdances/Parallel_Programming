@@ -20,8 +20,11 @@ program jacob_construct
 
     call calc_column()
     call calc_jacobian()
+    !! Reduce the arrays to root?? HOW??
 
     !---------------------------------------------------
+
+
     call end_parallel()
 
     ! Print the Results
